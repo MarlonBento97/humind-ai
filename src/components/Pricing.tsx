@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Pricing = () => {
+  const { toast } = useToast();
+  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
+
   const plans = [
     {
       name: "Start",
       subtitle: "Para começar bem",
       price: "490",
+      priceId: "price_1SMgzwRXkaez127zsSL5jQqc",
       features: [
         "1 canal WhatsApp",
         "Base de respostas + 200 intents",
@@ -18,6 +24,7 @@ const Pricing = () => {
       name: "Pro",
       subtitle: "Crescimento previsível",
       price: "1.490",
+      priceId: "price_1SMh0CRXkaez127zMpUIUL3C",
       featured: true,
       features: [
         "Tudo do Start",
@@ -42,6 +49,38 @@ const Pricing = () => {
   const whatsappNumber = "SEUNUMERO";
   const whatsappMessage = encodeURIComponent("Quero saber mais sobre os planos do humind.ia");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const handleCheckout = async (priceId: string, planName: string) => {
+    setLoadingPlan(planName);
+    try {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-checkout`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ priceId }),
+      });
+
+      const data = await response.json();
+
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      if (data.url) {
+        window.open(data.url, "_blank");
+      }
+    } catch (error) {
+      console.error("Error creating checkout:", error);
+      toast({
+        title: "Erro ao processar",
+        description: "Não foi possível iniciar o checkout. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoadingPlan(null);
+    }
+  };
 
   return (
     <section className="py-24 bg-background">
@@ -105,9 +144,16 @@ const Pricing = () => {
                 variant={plan.featured ? "hero" : "secondary"}
                 size="lg"
                 className="w-full"
-                onClick={() => window.open(whatsappUrl, '_blank')}
+                disabled={loadingPlan === plan.name}
+                onClick={() => {
+                  if (plan.priceId) {
+                    handleCheckout(plan.priceId, plan.name);
+                  } else {
+                    window.open(whatsappUrl, '_blank');
+                  }
+                }}
               >
-                Começar agora
+                {loadingPlan === plan.name ? "Processando..." : "Começar agora"}
               </Button>
             </div>
           ))}
