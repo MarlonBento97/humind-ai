@@ -52,14 +52,32 @@ const Pricing = () => {
 
   const handleCheckout = async (priceId: string, planName: string) => {
     setLoadingPlan(planName);
+    
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    
+    if (!supabaseUrl) {
+      toast({
+        title: "Configuração pendente",
+        description: "Para usar os planos, é necessário habilitar o Lovable Cloud nas configurações do projeto.",
+        variant: "destructive",
+      });
+      setLoadingPlan(null);
+      window.open(whatsappUrl, '_blank');
+      return;
+    }
+
     try {
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-checkout`, {
+      const response = await fetch(`${supabaseUrl}/functions/v1/create-checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ priceId }),
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const data = await response.json();
 
@@ -74,9 +92,10 @@ const Pricing = () => {
       console.error("Error creating checkout:", error);
       toast({
         title: "Erro ao processar",
-        description: "Não foi possível iniciar o checkout. Tente novamente.",
+        description: "Não foi possível iniciar o checkout. Entre em contato via WhatsApp.",
         variant: "destructive",
       });
+      window.open(whatsappUrl, '_blank');
     } finally {
       setLoadingPlan(null);
     }
