@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const whatsappNumber = "SEUNUMERO"; // Replace with actual number
@@ -10,17 +9,36 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with image and glow */}
+      {/* AI-themed animated background */}
       <div className="absolute inset-0 bg-background">
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+        {/* Neural network grid pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 163, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 163, 255, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+        
+        {/* Animated scan line */}
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          <div className="absolute inset-x-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-transparent animate-grid-scan" />
+        </div>
+        
+        {/* Glowing gradient orbs */}
         <div className="absolute inset-0" style={{ background: 'var(--gradient-glow)' }} />
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-particle-float" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-primary/70 rounded-full animate-particle-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-primary/50 rounded-full animate-particle-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-primary/80 rounded-full animate-particle-float" style={{ animationDelay: '6s' }} />
+        
+        {/* Data flow lines */}
+        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-data-flow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-data-flow" style={{ animationDelay: '3s' }} />
       </div>
 
       {/* Content */}
@@ -68,9 +86,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative gradient orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* Decorative gradient orbs with AI theme */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/10 rounded-full blur-[80px] pointer-events-none animate-float" />
     </section>
   );
 };

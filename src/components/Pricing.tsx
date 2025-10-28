@@ -1,18 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 
 const Pricing = () => {
-  const { toast } = useToast();
-  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
-
   const plans = [
     {
       name: "Start",
       subtitle: "Para começar bem",
-      price: "490",
-      priceId: "price_1SMgzwRXkaez127zsSL5jQqc",
+      price: "R$ 490/mês",
       features: [
         "1 canal WhatsApp",
         "Base de respostas + 200 intents",
@@ -23,8 +17,7 @@ const Pricing = () => {
     {
       name: "Pro",
       subtitle: "Crescimento previsível",
-      price: "1.490",
-      priceId: "price_1SMh0CRXkaez127zMpUIUL3C",
+      price: "R$ 1.490/mês",
       featured: true,
       features: [
         "Tudo do Start",
@@ -36,7 +29,7 @@ const Pricing = () => {
     {
       name: "Enterprise",
       subtitle: "Sob medida",
-      price: null,
+      price: "Sob consulta",
       features: [
         "Multi-times e SLAs",
         "Segurança e auditoria",
@@ -47,58 +40,19 @@ const Pricing = () => {
   ];
 
   const whatsappNumber = "SEUNUMERO";
-  const whatsappMessage = encodeURIComponent("Quero saber mais sobre os planos do humind.ia");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const handleCheckout = async (priceId: string, planName: string) => {
-    setLoadingPlan(planName);
+  const handleCheckout = (planName: string, planPrice: string) => {
+    const messages = {
+      Start: `Olá! Quero contratar o plano Start (${planPrice}) do humind.ia 🚀`,
+      Pro: `Olá! Quero contratar o plano Pro (${planPrice}) do humind.ia 🚀`,
+      Enterprise: "Olá! Quero saber mais sobre o plano Enterprise do humind.ia 🚀"
+    };
     
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    const message = messages[planName as keyof typeof messages] || messages.Enterprise;
+    const whatsappMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
     
-    if (!supabaseUrl) {
-      toast({
-        title: "Configuração pendente",
-        description: "Para usar os planos, é necessário habilitar o Lovable Cloud nas configurações do projeto.",
-        variant: "destructive",
-      });
-      setLoadingPlan(null);
-      window.open(whatsappUrl, '_blank');
-      return;
-    }
-
-    try {
-      const response = await fetch(`${supabaseUrl}/functions/v1/create-checkout`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ priceId }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      if (data.error) {
-        throw new Error(data.error);
-      }
-
-      if (data.url) {
-        window.open(data.url, "_blank");
-      }
-    } catch (error) {
-      console.error("Error creating checkout:", error);
-      toast({
-        title: "Erro ao processar",
-        description: "Não foi possível iniciar o checkout. Entre em contato via WhatsApp.",
-        variant: "destructive",
-      });
-      window.open(whatsappUrl, '_blank');
-    } finally {
-      setLoadingPlan(null);
-    }
+    window.open(url, '_blank');
   };
 
   return (
@@ -140,14 +94,7 @@ const Pricing = () => {
               </div>
 
               <div className="mb-8">
-                {plan.price ? (
-                  <>
-                    <span className="text-5xl font-bold">R$ {plan.price}</span>
-                    <span className="text-muted-foreground">/mês</span>
-                  </>
-                ) : (
-                  <span className="text-4xl font-bold">Sob consulta</span>
-                )}
+                <span className="text-5xl font-bold">{plan.price}</span>
               </div>
 
               <ul className="space-y-4 mb-8">
@@ -159,21 +106,14 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <Button 
-                variant={plan.featured ? "hero" : "secondary"}
-                size="lg"
-                className="w-full"
-                disabled={loadingPlan === plan.name}
-                onClick={() => {
-                  if (plan.priceId) {
-                    handleCheckout(plan.priceId, plan.name);
-                  } else {
-                    window.open(whatsappUrl, '_blank');
-                  }
-                }}
-              >
-                {loadingPlan === plan.name ? "Processando..." : "Começar agora"}
-              </Button>
+                  <Button
+                    variant={plan.featured ? "hero" : "secondary"}
+                    size="lg"
+                    className="w-full"
+                    onClick={() => handleCheckout(plan.name, plan.price)}
+                  >
+                    Começar agora
+                  </Button>
             </div>
           ))}
         </div>

@@ -9,10 +9,29 @@ const FinalCTA = () => {
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
-      {/* Background glow effects */}
+      {/* AI-themed background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+        {/* Neural grid */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 163, 255, 0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 163, 255, 0.15) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+        
+        {/* Glowing orbs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-primary/50 rounded-full animate-particle-float" />
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-primary/40 rounded-full animate-particle-float" style={{ animationDelay: '3s' }} />
+        
+        {/* Data flow line */}
+        <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-data-flow" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
