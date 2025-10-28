@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const FinalCTA = () => {
-  const whatsappUrl = "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
-  const calendlyUrl = "https://calendly.com/your-link";
+  const whatsappUrl =
+    "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+  const calendlyUrl =
+    "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
