@@ -22,7 +22,7 @@ const Pricing = () => {
     {
       name: "Enterprise",
       subtitle: "Sob medida",
-      price: "Sob consulta",
+      price: "",
       features: ["Multi-times e SLAs", "Segurança e auditoria", "Onboarding dedicado", "Preço sob proposta"],
     },
   ];
