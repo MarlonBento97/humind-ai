@@ -39,20 +39,8 @@ const Pricing = () => {
     },
   ];
 
-  const whatsappNumber = "SEUNUMERO";
-
-  const handleCheckout = (planName: string, planPrice: string) => {
-    const messages = {
-      Start: `Olá! Quero contratar o plano Start (${planPrice}) do humind.ia 🚀`,
-      Pro: `Olá! Quero contratar o plano Pro (${planPrice}) do humind.ia 🚀`,
-      Enterprise: "Olá! Quero saber mais sobre o plano Enterprise do humind.ia 🚀"
-    };
-    
-    const message = messages[planName as keyof typeof messages] || messages.Enterprise;
-    const whatsappMessage = encodeURIComponent(message);
-    const url = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-    
-    window.open(url, '_blank');
+  const handleCheckout = () => {
+    window.open('https://w.app/humindia', '_blank');
   };
 
   return (
@@ -110,7 +98,7 @@ const Pricing = () => {
                     variant={plan.featured ? "hero" : "secondary"}
                     size="lg"
                     className="w-full"
-                    onClick={() => handleCheckout(plan.name, plan.price)}
+                    onClick={handleCheckout}
                   >
                     Começar agora
                   </Button>

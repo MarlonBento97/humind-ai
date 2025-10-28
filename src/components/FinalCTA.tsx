@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const FinalCTA = () => {
-  const whatsappNumber = "SEUNUMERO";
-  const whatsappMessage = encodeURIComponent("Quero dar escala ao meu atendimento com humind.ia");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappUrl = "https://w.app/humindia";
   const calendlyUrl = "https://calendly.com/your-link";
 
   return (

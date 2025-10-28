@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const Hero = () => {
-  const whatsappNumber = "SEUNUMERO"; // Replace with actual number
-  const whatsappMessage = encodeURIComponent("Quero conhecer o humind.ia 🤖");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappUrl = "https://w.app/humindia";
   const calendlyUrl = "https://calendly.com/your-link"; // Replace with actual Calendly link
 
   return (
