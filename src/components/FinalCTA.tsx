@@ -2,26 +2,8 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const FinalCTA = () => {
+  const whatsappUrl = "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
   const calendlyUrl = "https://calendly.com/your-link";
-
-  const handleWhatsAppClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const phone = '5547999367017';
-    const text = encodeURIComponent('Olá, gostaria de saber mais sobre os Planos de agentes de I.A');
-    const waLink = `https://wa.me/${phone}?text=${text}`;
-
-    try {
-      // Detecta se está dentro de iFrame (preview Lovable / Webview)
-      if (window.top !== window.self) {
-        window.top!.location.href = waLink;
-      } else {
-        window.location.href = waLink;
-      }
-    } catch(e) {
-      // Se bloqueado, abre em nova aba
-      window.open(waLink, '_blank', 'noopener');
-    }
-  };
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
@@ -70,9 +52,11 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-            <Button variant="hero" size="lg" onClick={handleWhatsAppClick} className="min-w-[240px]">
-              <MessageCircle className="w-5 h-5" />
-              Falar no WhatsApp
+            <Button variant="hero" size="lg" asChild className="min-w-[240px]">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5" />
+                Falar no WhatsApp
+              </a>
             </Button>
             <Button variant="secondary" size="lg" asChild className="min-w-[240px]">
               <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">

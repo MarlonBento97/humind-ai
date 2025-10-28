@@ -2,25 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
-  const handleWhatsAppClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const phone = '5547999367017';
-    const text = encodeURIComponent('Olá, gostaria de saber mais sobre os Planos de agentes de I.A');
-    const waLink = `https://wa.me/${phone}?text=${text}`;
-
-    try {
-      // Detecta se está dentro de iFrame (preview Lovable / Webview)
-      if (window.top !== window.self) {
-        window.top!.location.href = waLink;
-      } else {
-        window.location.href = waLink;
-      }
-    } catch(e) {
-      // Se bloqueado, abre em nova aba
-      window.open(waLink, '_blank', 'noopener');
-    }
-  };
-
+  const whatsappUrl = "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+  
   const plans = [
     {
       name: "Start",
@@ -113,9 +96,11 @@ const Pricing = () => {
                     variant={plan.featured ? "hero" : "secondary"}
                     size="lg"
                     className="w-full"
-                    onClick={handleWhatsAppClick}
+                    asChild
                   >
-                    Começar agora
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      Começar agora
+                    </a>
                   </Button>
             </div>
           ))}
