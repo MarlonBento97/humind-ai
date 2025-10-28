@@ -39,8 +39,17 @@ const Pricing = () => {
     },
   ];
 
-  const handleCheckout = () => {
-    window.open('https://w.app/humindia', '_blank');
+  const handleCheckout = (planName: string, planPrice: string) => {
+    const messages = {
+      Start: `Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20plano%20Start%20(${encodeURIComponent(planPrice)})%20do%20humind.ia`,
+      Pro: `Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20plano%20Pro%20(${encodeURIComponent(planPrice)})%20do%20humind.ia`,
+      Enterprise: "Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Enterprise%20do%20humind.ia"
+    };
+    
+    const message = messages[planName as keyof typeof messages] || messages.Enterprise;
+    const url = `https://api.whatsapp.com/send?phone=5547999367017&text=${message}`;
+    
+    window.open(url, '_blank');
   };
 
   return (
@@ -98,7 +107,7 @@ const Pricing = () => {
                     variant={plan.featured ? "hero" : "secondary"}
                     size="lg"
                     className="w-full"
-                    onClick={handleCheckout}
+                    onClick={() => handleCheckout(plan.name, plan.price)}
                   >
                     Começar agora
                   </Button>
