@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const FinalCTA = () => {
-  const whatsappUrl = "https://api.whatsapp.com/send?phone=5547999367017&text=Quero%20dar%20escala%20ao%20meu%20atendimento%20com%20humind.ia";
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=5547999367017&text=Ol%C3%A1+gostaria+de+saber+mais+sobres+os+Planos+de+agentes+de+I.A";
   const calendlyUrl = "https://calendly.com/your-link";
 
   return (
