@@ -3,7 +3,7 @@ import { MessageCircle, Calendar } from "lucide-react";
 
 const Hero = () => {
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5547999367017&text=Ol%C3%A1+gostaria+de+saber+mais+sobres+os+Planos+de+agentes+de+I.A";
-  const calendlyUrl = "https://calendly.com/your-link"; // Replace with actual Calendly link
+  const calendlyUrl = "https://calendly.com/your-link";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -61,20 +61,24 @@ const Hero = () => {
             <Button 
               variant="hero" 
               size="lg"
-              onClick={() => window.open(whatsappUrl, '_blank')}
+              asChild
               className="min-w-[240px]"
             >
-              <MessageCircle className="w-5 h-5" />
-              Testar no WhatsApp
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5" />
+                Testar no WhatsApp
+              </a>
             </Button>
             <Button 
               variant="secondary" 
               size="lg"
-              onClick={() => window.open(calendlyUrl, '_blank')}
+              asChild
               className="min-w-[240px]"
             >
-              <Calendar className="w-5 h-5" />
-              Agendar demonstração
+              <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-5 h-5" />
+                Agendar demonstração
+              </a>
             </Button>
           </div>
 

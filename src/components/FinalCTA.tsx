@@ -47,20 +47,24 @@ const FinalCTA = () => {
             <Button 
               variant="hero" 
               size="lg"
-              onClick={() => window.open(whatsappUrl, '_blank')}
+              asChild
               className="min-w-[240px]"
             >
-              <MessageCircle className="w-5 h-5" />
-              Falar no WhatsApp
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5" />
+                Falar no WhatsApp
+              </a>
             </Button>
             <Button 
               variant="secondary" 
               size="lg"
-              onClick={() => window.open(calendlyUrl, '_blank')}
+              asChild
               className="min-w-[240px]"
             >
-              <Calendar className="w-5 h-5" />
-              Ver demonstração de 15 min
+              <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-5 h-5" />
+                Ver demonstração de 15 min
+              </a>
             </Button>
           </div>
         </div>

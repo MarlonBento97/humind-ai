@@ -39,9 +39,7 @@ const Pricing = () => {
     },
   ];
 
-  const handleCheckout = () => {
-    window.open('https://api.whatsapp.com/send?phone=5547999367017&text=Ol%C3%A1+gostaria+de+saber+mais+sobres+os+Planos+de+agentes+de+I.A', '_blank');
-  };
+  const whatsappUrl = 'https://api.whatsapp.com/send?phone=5547999367017&text=Ol%C3%A1+gostaria+de+saber+mais+sobres+os+Planos+de+agentes+de+I.A';
 
   return (
     <section className="py-24 bg-background">
@@ -94,13 +92,15 @@ const Pricing = () => {
                 ))}
               </ul>
 
-                  <Button
+                  <Button 
                     variant={plan.featured ? "hero" : "secondary"}
                     size="lg"
                     className="w-full"
-                    onClick={handleCheckout}
+                    asChild
                   >
-                    Começar agora
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      Começar agora
+                    </a>
                   </Button>
             </div>
           ))}
