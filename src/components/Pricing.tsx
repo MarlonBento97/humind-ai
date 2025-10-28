@@ -2,42 +2,28 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
-  const whatsappUrl = "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
-  
+  const whatsappUrl =
+    "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+
   const plans = [
     {
       name: "Start",
       subtitle: "Para começar bem",
-      price: "R$ 490/mês",
-      features: [
-        "1 canal WhatsApp",
-        "Base de respostas + 200 intents",
-        "Agendamentos básicos",
-        "Suporte assíncrono",
-      ],
+      price: "",
+      features: ["1 canal WhatsApp", "Base de respostas + 200 intents", "Agendamentos básicos", "Suporte assíncrono"],
     },
     {
       name: "Pro",
       subtitle: "Crescimento previsível",
-      price: "R$ 1.490/mês",
+      price: "",
       featured: true,
-      features: [
-        "Tudo do Start",
-        "3 canais + roteamento",
-        "Handoff humano + integrações n8n",
-        "Relatórios e métricas",
-      ],
+      features: ["Tudo do Start", "3 canais + roteamento", "Handoff humano + integrações n8n", "Relatórios e métricas"],
     },
     {
       name: "Enterprise",
       subtitle: "Sob medida",
       price: "Sob consulta",
-      features: [
-        "Multi-times e SLAs",
-        "Segurança e auditoria",
-        "Onboarding dedicado",
-        "Preço sob proposta",
-      ],
+      features: ["Multi-times e SLAs", "Segurança e auditoria", "Onboarding dedicado", "Preço sob proposta"],
     },
   ];
 
@@ -48,24 +34,18 @@ const Pricing = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Planos e <span className="text-primary">preços</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Escolha o plano ideal para o seu negócio
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Escolha o plano ideal para o seu negócio</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <div 
+            <div
               key={index}
               className={`relative p-8 rounded-2xl border ${
-                plan.featured 
-                  ? 'border-primary bg-card/80 backdrop-blur-sm scale-105' 
-                  : 'border-border bg-card/50'
+                plan.featured ? "border-primary bg-card/80 backdrop-blur-sm scale-105" : "border-border bg-card/50"
               } transition-all duration-300 hover:border-primary/50`}
-              style={{ 
-                boxShadow: plan.featured 
-                  ? '0 0 40px hsl(var(--primary) / 0.2)' 
-                  : 'var(--shadow-card)' 
+              style={{
+                boxShadow: plan.featured ? "0 0 40px hsl(var(--primary) / 0.2)" : "var(--shadow-card)",
               }}
             >
               {plan.featured && (
@@ -73,7 +53,7 @@ const Pricing = () => {
                   Popular
                 </div>
               )}
-              
+
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm">{plan.subtitle}</p>
@@ -92,16 +72,11 @@ const Pricing = () => {
                 ))}
               </ul>
 
-                  <Button 
-                    variant={plan.featured ? "hero" : "secondary"}
-                    size="lg"
-                    className="w-full"
-                    asChild
-                  >
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      Começar agora
-                    </a>
-                  </Button>
+              <Button variant={plan.featured ? "hero" : "secondary"} size="lg" className="w-full" asChild>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Começar agora
+                </a>
+              </Button>
             </div>
           ))}
         </div>
