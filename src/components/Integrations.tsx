@@ -1,4 +1,4 @@
-const Integrations = () => {
+﻿const Integrations = () => {
   const integrations = [
     "WhatsApp Business API",
     "n8n",
@@ -16,14 +16,14 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="integracoes" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Conecta onde o seu time já está
+            Conecta onde o seu time jÃ¡ estÃ¡
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Integração nativa com as ferramentas que você já usa
+            IntegraÃ§Ã£o nativa com as ferramentas que vocÃª jÃ¡ usa
           </p>
         </div>
 
@@ -47,3 +47,4 @@ const Integrations = () => {
 };
 
 export default Integrations;
+

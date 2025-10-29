@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const FinalCTA = () => {
   const whatsappUrl =
-    "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+    "https://wa.me/5547999367017?text=OlÃ¡%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
   const calendlyUrl =
     "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
 
@@ -50,7 +50,7 @@ const FinalCTA = () => {
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Converse com nosso time ou agende uma demonstração de 15 minutos
+            Converse com nosso time ou agende uma demonstraÃ§Ã£o de 15 minutos
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
@@ -63,7 +63,7 @@ const FinalCTA = () => {
             <Button variant="secondary" size="lg" asChild className="min-w-[240px]">
               <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
                 <Calendar className="w-5 h-5" />
-                Ver demonstração de 15 min
+                Ver demonstraÃ§Ã£o de 15 min
               </a>
             </Button>
           </div>
@@ -74,3 +74,4 @@ const FinalCTA = () => {
 };
 
 export default FinalCTA;
+

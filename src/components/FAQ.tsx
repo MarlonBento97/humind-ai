@@ -1,4 +1,4 @@
-import {
+﻿import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -8,36 +8,36 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "É WhatsApp oficial?",
-      answer: "Sim, trabalhamos via provedores homologados pelo WhatsApp (360Dialog, Zenvia e Twilio), garantindo segurança e conformidade total.",
+      question: "Ã‰ WhatsApp oficial?",
+      answer: "Sim, trabalhamos via provedores homologados pelo WhatsApp (360Dialog, Zenvia e Twilio), garantindo seguranÃ§a e conformidade total.",
     },
     {
       question: "A IA pode errar?",
-      answer: "Como qualquer sistema inteligente, pode haver situações imprevistas. Por isso implementamos regras de fallback e handoff humano automático para garantir sempre a melhor experiência.",
+      answer: "Como qualquer sistema inteligente, pode haver situaÃ§Ãµes imprevistas. Por isso implementamos regras de fallback e handoff humano automÃ¡tico para garantir sempre a melhor experiÃªncia.",
     },
     {
-      question: "Dá para usar minha base de conteúdo?",
-      answer: "Sim! Você pode integrar FAQs, PDFs, documentos e dados do seu Supabase ou Google Sheets para alimentar a base de conhecimento.",
+      question: "DÃ¡ para usar minha base de conteÃºdo?",
+      answer: "Sim! VocÃª pode integrar FAQs, PDFs, documentos e dados do seu Supabase ou Google Sheets para alimentar a base de conhecimento.",
     },
     {
-      question: "Agenda automático funciona?",
-      answer: "Sim, integramos com Google Agenda e Calendly, incluindo confirmação automática e lembretes para reduzir ausências.",
+      question: "Agenda automÃ¡tico funciona?",
+      answer: "Sim, integramos com Google Agenda e Calendly, incluindo confirmaÃ§Ã£o automÃ¡tica e lembretes para reduzir ausÃªncias.",
     },
     {
       question: "Funciona sem programador?",
-      answer: "Para o básico sim, é plug and play. Para integrações avançadas, fornecemos documentação completa e suporte técnico.",
+      answer: "Para o bÃ¡sico sim, Ã© plug and play. Para integraÃ§Ãµes avanÃ§adas, fornecemos documentaÃ§Ã£o completa e suporte tÃ©cnico.",
     },
     {
       question: "Quantos atendentes humanos posso ter?",
-      answer: "Nos planos Pro e Enterprise não há limite de atendentes humanos que podem receber transferências do bot.",
+      answer: "Nos planos Pro e Enterprise nÃ£o hÃ¡ limite de atendentes humanos que podem receber transferÃªncias do bot.",
     },
     {
-      question: "Como funciona em relação à LGPD?",
-      answer: "Logs são opcionais, implementamos consentimento ativo, opt-out facilitado e todas as melhores práticas de segurança de dados.",
+      question: "Como funciona em relaÃ§Ã£o Ã  LGPD?",
+      answer: "Logs sÃ£o opcionais, implementamos consentimento ativo, opt-out facilitado e todas as melhores prÃ¡ticas de seguranÃ§a de dados.",
     },
     {
       question: "Em quanto tempo vou ao ar?",
-      answer: "O MVP básico fica pronto em 5-10 dias na maioria dos cenários. Integrações complexas podem levar um pouco mais.",
+      answer: "O MVP bÃ¡sico fica pronto em 5-10 dias na maioria dos cenÃ¡rios. IntegraÃ§Ãµes complexas podem levar um pouco mais.",
     },
   ];
 
@@ -49,7 +49,7 @@ const FAQ = () => {
             Perguntas <span className="text-primary">frequentes</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tire suas dúvidas sobre o humind.ia
+            Tire suas dÃºvidas sobre o humind.ia
           </p>
         </div>
 
@@ -77,3 +77,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+

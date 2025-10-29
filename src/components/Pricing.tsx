@@ -1,40 +1,47 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
   const whatsappUrl =
-    "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+    "https://wa.me/5547999367017?text=OlÃ¡%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
 
   const plans = [
     {
       name: "Start",
-      subtitle: "Para começar bem",
+      subtitle: "Para comeÃ§ar bem",
       price: "",
-      features: ["1 canal WhatsApp", "Base de respostas + 200 intents", "Agendamentos básicos", "Suporte assíncrono"],
+      features: ["1 canal WhatsApp", "Base de respostas + 200 intents", "Agendamentos bÃ¡sicos", "Suporte assÃ­ncrono"],
     },
     {
       name: "Pro",
-      subtitle: "Crescimento previsível",
+      subtitle: "Crescimento previsÃ­vel",
       price: "",
       featured: true,
-      features: ["Tudo do Start", "3 canais + roteamento", "Handoff humano + integrações n8n", "Relatórios e métricas"],
+      features: ["Tudo do Start", "3 canais + roteamento", "Handoff humano + integraÃ§Ãµes n8n", "RelatÃ³rios e mÃ©tricas"],
     },
     {
       name: "Enterprise",
       subtitle: "Sob medida",
       price: "",
-      features: ["Multi-times e SLAs", "Segurança e auditoria", "Onboarding dedicado", "Preço sob proposta"],
+      features: ["Multi-times e SLAs", "SeguranÃ§a e auditoria", "Onboarding dedicado", "PreÃ§o sob proposta"],
     },
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="precos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Planos e <span className="text-primary">preços</span>
+            Planos e <span className="text-primary">preÃ§os</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Escolha o plano ideal para o seu negócio</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Escolha o plano ideal para o seu negÃ³cio</p>
+        </div>
+
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card/70 text-sm">
+            <span className="text-muted-foreground">A partir de</span>
+            <span className="font-semibold">R$ 1.490/mÃªs</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -74,7 +81,7 @@ const Pricing = () => {
 
               <Button variant={plan.featured ? "hero" : "secondary"} size="lg" className="w-full" asChild>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  Começar agora
+                  ComeÃ§ar agora
                 </a>
               </Button>
             </div>
@@ -86,3 +93,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+

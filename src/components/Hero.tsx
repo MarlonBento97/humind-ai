@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const Hero = () => {
   const whatsappUrl =
-    "https://wa.me/5547999367017?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+    "https://wa.me/5547999367017?text=OlÃ¡%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
   const calendlyUrl =
     "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
 
@@ -71,30 +71,30 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Conversas que viram <span className="text-primary glow-text">negócios</span>
+            Conversas que viram <span className="text-primary glow-text">negÃ³cios</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Um chatbot realmente humanizado que atende no WhatsApp, agenda, responde dúvidas e encaminha para o humano
-            certo quando precisa. Rápido, educado e sempre no tom da sua marca.
+            Um chatbot realmente humanizado que atende no WhatsApp, agenda, responde dÃºvidas e encaminha para o humano
+            certo quando precisa. RÃ¡pido, educado e sempre no tom da sua marca.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
             <Button variant="hero" size="lg" asChild className="min-w-[240px]">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5" />
-                Testar no WhatsApp
+                Agende conversa no WhatsApp
               </a>
             </Button>
             <Button variant="secondary" size="lg" asChild className="min-w-[240px]">
               <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
                 <Calendar className="w-5 h-5" />
-                Agendar demonstração
+                Agendar demonstraÃ§Ã£o
               </a>
             </Button>
           </div>
 
-          <p className="text-sm text-muted-foreground pt-4">Integração em dias, não meses</p>
+          <p className="text-sm text-muted-foreground pt-4">IntegraÃ§Ã£o em dias, nÃ£o meses</p>
         </div>
       </div>
 
@@ -105,8 +105,11 @@ const Hero = () => {
         style={{ animationDelay: "1.5s" }}
       />
       <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/10 rounded-full blur-[80px] pointer-events-none animate-float" />
+
+      {/** Robo removido **/}
     </section>
   );
 };
 
 export default Hero;
+

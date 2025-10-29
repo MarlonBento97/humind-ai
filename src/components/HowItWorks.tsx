@@ -1,33 +1,33 @@
-import { Radio, Brain, UserCheck } from "lucide-react";
+﻿import { Radio, Brain, UserCheck } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
       icon: Radio,
       title: "Capta & entende",
-      description: "Identifica intenção, urgência e canal do cliente em tempo real",
+      description: "Identifica intenÃ§Ã£o, urgÃªncia e canal do cliente em tempo real",
     },
     {
       icon: Brain,
       title: "Resolve & registra",
-      description: "Responde, consulta dados e salva histórico de forma inteligente",
+      description: "Responde, consulta dados e salva histÃ³rico de forma inteligente",
     },
     {
       icon: UserCheck,
       title: "Encaminha & agenda",
-      description: "Passa para humano certo ou agenda automaticamente quando necessário",
+      description: "Passa para humano certo ou agenda automaticamente quando necessÃ¡rio",
     },
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="como-funciona" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Como funciona
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Três etapas simples para revolucionar seu atendimento
+            TrÃªs etapas simples para revolucionar seu atendimento
           </p>
         </div>
 
@@ -58,3 +58,4 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+

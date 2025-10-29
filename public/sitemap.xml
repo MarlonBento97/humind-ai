@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://example.com/quem-somos</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/blog</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/privacidade</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/termos</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/cookies</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/contato</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/suporte</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/precos</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/integracoes</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/cases</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/blog/chatbot-whatsapp-agendar-servicos</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://example.com/blog/erros-atendimento-que-custam-vendas</loc><lastmod>2025-10-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>
