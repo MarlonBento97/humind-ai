@@ -1,29 +1,44 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
   const whatsappUrl =
-    "https://wa.me/5547999367017?text=OlÃ¡%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+    "https://wa.me/5547999367017?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
 
   const plans = [
     {
       name: "Start",
-      subtitle: "Para comeÃ§ar bem",
+      subtitle: "Para começar bem",
       price: "",
-      features: ["1 canal WhatsApp", "Base de respostas + 200 intents", "Agendamentos bÃ¡sicos", "Suporte assÃ­ncrono"],
+      features: [
+        "1 canal WhatsApp",
+        "Base de respostas + 200 intents",
+        "Agendamentos básicos",
+        "Suporte assíncrono",
+      ],
     },
     {
       name: "Pro",
-      subtitle: "Crescimento previsÃ­vel",
+      subtitle: "Crescimento previsível",
       price: "",
       featured: true,
-      features: ["Tudo do Start", "3 canais + roteamento", "Handoff humano + integraÃ§Ãµes n8n", "RelatÃ³rios e mÃ©tricas"],
+      features: [
+        "Tudo do Start",
+        "3 canais + roteamento",
+        "Handoff humano + integrações n8n",
+        "Relatórios e métricas",
+      ],
     },
     {
       name: "Enterprise",
       subtitle: "Sob medida",
       price: "",
-      features: ["Multi-times e SLAs", "SeguranÃ§a e auditoria", "Onboarding dedicado", "PreÃ§o sob proposta"],
+      features: [
+        "Multi-times e SLAs",
+        "Segurança e auditoria",
+        "Onboarding dedicado",
+        "Preço sob proposta",
+      ],
     },
   ];
 
@@ -32,15 +47,14 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Planos e <span className="text-primary">preÃ§os</span>
+            Planos e <span className="text-primary">preços</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Escolha o plano ideal para o seu negÃ³cio</p>
-        </div>
-
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card/70 text-sm">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Escolha o plano ideal para o seu negócio
+          </p>
+          <div className="inline-flex items-center gap-2 mt-3 px-3 py-1 rounded-full border border-border bg-card/70 text-sm">
             <span className="text-muted-foreground">A partir de</span>
-            <span className="font-semibold">R$ 1.490/mÃªs</span>
+            <span className="font-semibold">R$ 1.490/mês</span>
           </div>
         </div>
 
@@ -49,7 +63,9 @@ const Pricing = () => {
             <div
               key={index}
               className={`relative p-8 rounded-2xl border ${
-                plan.featured ? "border-primary bg-card/80 backdrop-blur-sm scale-105" : "border-border bg-card/50"
+                plan.featured
+                  ? "border-primary bg-card/80 backdrop-blur-sm scale-105"
+                  : "border-border bg-card/50"
               } transition-all duration-300 hover:border-primary/50`}
               style={{
                 boxShadow: plan.featured ? "0 0 40px hsl(var(--primary) / 0.2)" : "var(--shadow-card)",
@@ -79,9 +95,14 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <Button variant={plan.featured ? "hero" : "secondary"} size="lg" className="w-full" asChild>
+              <Button
+                variant={plan.featured ? "hero" : "secondary"}
+                size="lg"
+                className="w-full"
+                asChild
+              >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  ComeÃ§ar agora
+                  Começar agora
                 </a>
               </Button>
             </div>

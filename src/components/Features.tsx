@@ -1,4 +1,4 @@
-﻿import { Heart, GitBranch, Calendar, MessageSquare, Database, Users } from "lucide-react";
+import { Heart, GitBranch, Calendar, MessageSquare, Database, Users } from "lucide-react";
 import Tilt from "@/components/effects/Tilt";
 
 const Features = () => {
@@ -6,17 +6,17 @@ const Features = () => {
     {
       icon: Heart,
       title: "Atendimento humanizado",
-      description: "Tom da sua marca, sem robÃ´zice. Respostas naturais e empÃ¡ticas.",
+      description: "Tom da sua marca, sem robôzice. Respostas naturais e empáticas.",
     },
     {
       icon: GitBranch,
       title: "Triage inteligente",
-      description: "Novo cliente, suporte, orÃ§amento ou agendamento â€” roteamento perfeito.",
+      description: "Novo cliente, suporte, orçamento ou agendamento — roteamento perfeito.",
     },
     {
       icon: Calendar,
-      title: "Agendamento automÃ¡tico",
-      description: "Google Agenda e Calendly integrados com confirmaÃ§Ã£o automÃ¡tica.",
+      title: "Agendamento automático",
+      description: "Google Agenda e Calendly integrados com confirmação automática.",
     },
     {
       icon: MessageSquare,
@@ -26,12 +26,12 @@ const Features = () => {
     {
       icon: Database,
       title: "Base de conhecimento",
-      description: "FAQs, documentos e integraÃ§Ãµes com Supabase prontas para uso.",
+      description: "FAQs, documentos e integrações com Supabase prontas para uso.",
     },
     {
       icon: Users,
       title: "Handoff com contexto",
-      description: "Quando precisa, entra o humano com todo o histÃ³rico da conversa.",
+      description: "Quando precisa, entra o humano com todo o histórico da conversa.",
     },
   ];
 
@@ -40,10 +40,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Recursos que fazem a <span className="text-primary">diferenÃ§a</span>
+            Recursos que fazem a <span className="text-primary">diferença</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tudo que vocÃª precisa para atendimento de alto nÃ­vel
+            Tudo que você precisa para atendimento de alto nível
           </p>
         </div>
 
@@ -53,12 +53,11 @@ const Features = () => {
             return (
               <Tilt key={index} className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300 group hover-lift" >
                 <div className="pointer-events-none" style={{ boxShadow: 'var(--shadow-card)' }}>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-6 h-6 text-primary" strokeWidth={2} />
-                </div>
-                
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-6 h-6 text-primary" strokeWidth={2} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </Tilt>
             );

@@ -14,7 +14,8 @@
                     "preview:staging":  "vite preview --mode staging",
                     "backup":  "npm run build \u0026\u0026 powershell -NoProfile -Command \"$d=(Get-Date -Format yyyyMMddHHmm); if (!(Test-Path backups)) { New-Item -ItemType Directory backups | Out-Null }; Compress-Archive -Path dist/* -DestinationPath backups/site-$d.zip -Force\"",
                     "sitemap":  "node scripts/generate-sitemap.mjs",
-                    "prebuild":  "node scripts/generate-sitemap.mjs"
+                    "prebuild":  "node scripts/generate-sitemap.mjs",
+                    "utf8":  "node scripts/utf8-rewrite.mjs"
                 },
     "dependencies":  {
                          "@hookform/resolvers":  "^3.10.0",

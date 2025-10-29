@@ -1,17 +1,15 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
 
 const FinalCTA = () => {
   const whatsappUrl =
-    "https://wa.me/5547999367017?text=OlÃ¡%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+    "https://wa.me/5547999367017?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
   const calendlyUrl =
     "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
-      {/* AI-themed background effects */}
       <div className="absolute inset-0">
-        {/* Neural grid */}
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -24,22 +22,16 @@ const FinalCTA = () => {
             }}
           />
         </div>
-
-        {/* Glowing orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
         <div
           className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse-glow"
           style={{ animationDelay: "1.5s" }}
         />
-
-        {/* Floating particles */}
         <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-primary/50 rounded-full animate-particle-float" />
         <div
           className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-primary/40 rounded-full animate-particle-float"
           style={{ animationDelay: "3s" }}
         />
-
-        {/* Data flow line */}
         <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-data-flow" />
       </div>
 
@@ -50,7 +42,7 @@ const FinalCTA = () => {
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Converse com nosso time ou agende uma demonstraÃ§Ã£o de 15 minutos
+            Converse com nosso time ou agende uma demonstração de 15 minutos
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
@@ -63,7 +55,7 @@ const FinalCTA = () => {
             <Button variant="secondary" size="lg" asChild className="min-w-[240px]">
               <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
                 <Calendar className="w-5 h-5" />
-                Ver demonstraÃ§Ã£o de 15 min
+                Ver demonstração de 15 min
               </a>
             </Button>
           </div>

@@ -1,21 +1,21 @@
-﻿import { TrendingUp, Clock, Target } from "lucide-react";
+import { TrendingUp, Clock, Target } from "lucide-react";
 
 const SocialProof = () => {
   const metrics = [
     {
       icon: Target,
       value: "+95%",
-      label: "satisfaÃ§Ã£o",
+      label: "satisfação",
     },
     {
       icon: Clock,
       value: "-40%",
-      label: "tempo mÃ©dio de resposta",
+      label: "tempo médio de resposta",
     },
     {
       icon: TrendingUp,
       value: "+27%",
-      label: "conversÃµes no WhatsApp",
+      label: "conversões no WhatsApp",
     },
   ];
 
@@ -26,10 +26,12 @@ const SocialProof = () => {
           Confiado por times que valorizam <span className="text-primary">atendimento de verdade</span>
         </h2>
 
-        {/* Logo bar */}
         <div className="flex flex-wrap items-center justify-center gap-8 opacity-80 mb-12">
-          {['Acme','Globex','Umbrella','Initech','Hooli'].map((brand) => (
-            <div key={brand} className="text-sm md:text-base text-muted-foreground px-3 py-1 border border-border rounded-md bg-background/60">
+          {["Acme", "Globex", "Umbrella", "Initech", "Hooli"].map((brand) => (
+            <div
+              key={brand}
+              className="text-sm md:text-base text-muted-foreground px-3 py-1 border border-border rounded-md bg-background/60"
+            >
               {brand}
             </div>
           ))}
@@ -39,7 +41,7 @@ const SocialProof = () => {
           {metrics.map((metric, index) => {
             const Icon = metric.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="text-center p-8 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors duration-300 gradient-border"
                 style={{ boxShadow: 'var(--shadow-card)' }}
@@ -52,10 +54,12 @@ const SocialProof = () => {
           })}
         </div>
 
-        {/* Highlight testimonial */}
         <div className="max-w-3xl mx-auto p-6 md:p-8 rounded-2xl border border-border bg-card/70">
-          <p className="text-lg md:text-xl leading-relaxed">â€œEm poucas semanas, reduzimos o tempo mÃ©dio de resposta e aumentamos as conversÃµes no WhatsApp. A experiÃªncia do cliente melhorou muito.â€</p>
-          <div className="mt-4 text-sm text-muted-foreground">â€” Ana Souza, Gerente de CX</div>
+          <p className="text-lg md:text-xl leading-relaxed">
+            “Em poucas semanas, reduzimos o tempo médio de resposta e aumentamos as conversões no WhatsApp. A experiência
+            do cliente melhorou muito.”
+          </p>
+          <div className="mt-4 text-sm text-muted-foreground">— Ana Souza, Gerente de CX</div>
         </div>
       </div>
     </section>
