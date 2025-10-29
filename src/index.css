@@ -147,6 +147,10 @@ All colors MUST be HSL.
     100% { transform: translate(100px, -100px); opacity: 0; }
   }
 
+  @keyframes orbit-dash {
+    to { stroke-dashoffset: -200; }
+  }
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -165,6 +169,10 @@ All colors MUST be HSL.
 
   .animate-particle-float {
     animation: particle-float 8s ease-in-out infinite;
+  }
+
+  .animate-orbit-dash {
+    animation: orbit-dash 6s linear infinite;
   }
 }
 
