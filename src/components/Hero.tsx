@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
-import Logo from "@/components/Logo";
 
 const Hero = () => {
   const whatsappUrl =
@@ -55,8 +54,8 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="inline-block mb-6" aria-label="humind.ia">
-            <Logo size={140} />
+          <div className="inline-block mb-6">
+            <h2 className="text-2xl font-bold text-primary glow-text">humind.ia</h2>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Conversas que viram <span className="text-primary glow-text">negócios</span>
@@ -94,3 +93,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
