@@ -1,61 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
-
 const Hero = () => {
-  const whatsappUrl =
-    "https://api.whatsapp.com/send/?phone=5547999367017&text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+Planos+de+agentes+de+I.A&type=phone_number&app_absent=0";
-  const calendlyUrl =
-    "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5547999367017&text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+Planos+de+agentes+de+I.A&type=phone_number&app_absent=0";
+  const calendlyUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-background">
         <div className="absolute inset-0 opacity-20">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `
+          <div className="absolute inset-0" style={{
+          backgroundImage: `
               linear-gradient(rgba(0, 163, 255, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 163, 255, 0.1) 1px, transparent 1px)
             `,
-              backgroundSize: "50px 50px",
-            }}
-          />
+          backgroundSize: "50px 50px"
+        }} />
         </div>
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <div className="absolute inset-x-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-transparent animate-grid-scan" />
         </div>
-        <div className="absolute inset-0" style={{ background: "var(--gradient-glow)" }} />
-        <div
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-particle-float"
-          style={{ animationDelay: "0s" }}
-        />
-        <div
-          className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-primary/70 rounded-full animate-particle-float"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-primary/50 rounded-full animate-particle-float"
-          style={{ animationDelay: "4s" }}
-        />
-        <div
-          className="absolute top-1/2 right-1/4 w-1 h-1 bg-primary/80 rounded-full animate-particle-float"
-          style={{ animationDelay: "6s" }}
-        />
-        <div
-          className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-data-flow"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-data-flow"
-          style={{ animationDelay: "3s" }}
-        />
+        <div className="absolute inset-0" style={{
+        background: "var(--gradient-glow)"
+      }} />
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-particle-float" style={{
+        animationDelay: "0s"
+      }} />
+        <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-primary/70 rounded-full animate-particle-float" style={{
+        animationDelay: "2s"
+      }} />
+        <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-primary/50 rounded-full animate-particle-float" style={{
+        animationDelay: "4s"
+      }} />
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-primary/80 rounded-full animate-particle-float" style={{
+        animationDelay: "6s"
+      }} />
+        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-data-flow" style={{
+        animationDelay: "1s"
+      }} />
+        <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent animate-data-flow" style={{
+        animationDelay: "3s"
+      }} />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-block mb-6">
-            <h2 className="text-2xl font-bold text-primary glow-text">humind.ia</h2>
+            <h2 className="font-bold text-primary glow-text text-9xl">Humind.IA</h2>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Conversas que viram <span className="text-primary glow-text">negócios</span>
@@ -83,14 +71,10 @@ const Hero = () => {
       </div>
 
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" />
-      <div
-        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none animate-pulse-glow"
-        style={{ animationDelay: "1.5s" }}
-      />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" style={{
+      animationDelay: "1.5s"
+    }} />
       <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/10 rounded-full blur-[80px] pointer-events-none animate-float" />
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
-
