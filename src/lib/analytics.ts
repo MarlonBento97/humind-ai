@@ -15,9 +15,8 @@ export const initGA = () => {
   if (!id) return;
   try {
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      // @ts-ignore
-      window.dataLayer.push(arguments);
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
     }
     window.gtag = gtag as any;
     gtag("js", new Date());
@@ -39,7 +38,7 @@ export const trackPageview = (path: string) => {
 
 export const trackEvent = (
   action: string,
-  params?: { category?: string; label?: string; value?: number | string }
+  params?: { category?: string; label?: string; value?: number | string; [key: string]: any }
 ) => {
   if (!window.gtag) return;
   window.gtag("event", action, params || {});
@@ -55,7 +54,7 @@ export const attachCTATracking = () => {
     if (!link) return;
     const href = link.getAttribute("href") || "";
     const variant = getCtaVariant();
-    if (/wa\.me\//.test(href)) {
+    if (/wa\.me\/|api\.whatsapp\.com\/send/.test(href)) {
       trackEvent("lead_whatsapp_click", { category: "cta", label: "auto", cta_variant: variant as any });
     } else if (/calendar\.google\.com\/calendar\//.test(href)) {
       trackEvent("lead_agendar_demo", { category: "cta", label: "auto", cta_variant: variant as any });

@@ -42,7 +42,7 @@ const Index = () => {
           brand: { "@type": "Brand", name: "humind.ia" },
         },
       ],
-    } as const;
+    };
   }, []);
   return (
     <main className="min-h-screen">

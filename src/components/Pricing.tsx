@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 const Pricing = () => {
   const whatsappUrl =
-    "https://wa.me/5547999367017?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Planos%20de%20agentes%20de%20I.A";
+    "https://api.whatsapp.com/send/?phone=5547999367017&text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+Planos+de+agentes+de+I.A&type=phone_number&app_absent=0";
 
   const plans = [
     {
