@@ -17,7 +17,7 @@ function injectExternalWidgets() {
   }
 }
 
-injectExternalWidgets();
+// injectExternalWidgets(); // Comentado para permitir links diretos do WhatsApp
 
 // Hotjar (mapa de calor) - ativado se VITE_HOTJAR_ID e VITE_HOTJAR_SV estiverem definidos
 function injectHotjar() {
