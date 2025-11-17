@@ -2,8 +2,8 @@ import SEOHead from "@/components/SEOHead";
 
 const team = [
   {
-    name: "Marlo",
-    role: "Fundador & Produto",
+    name: "Marlon",
+    role: "Founder",
     bio: "Empreendedor, apaixonado por IA aplicada ao atendimento e crescimento.",
     photo: "/placeholder.svg",
   },
@@ -38,8 +38,17 @@ const Team = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((m) => (
-              <div key={m.name} className="p-6 rounded-xl border border-border bg-card" style={{boxShadow:'var(--shadow-card)'}}>
-                <img src={m.photo} alt={`Foto de ${m.name}`} className="w-24 h-24 rounded-full object-cover mb-4" loading="lazy" />
+              <div
+                key={m.name}
+                className="p-6 rounded-xl border border-border bg-card"
+                style={{ boxShadow: "var(--shadow-card)" }}
+              >
+                <img
+                  src={m.photo}
+                  alt={`Foto de ${m.name}`}
+                  className="w-24 h-24 rounded-full object-cover mb-4"
+                  loading="lazy"
+                />
                 <h3 className="text-xl font-semibold">{m.name}</h3>
                 <p className="text-sm text-primary mb-2">{m.role}</p>
                 <p className="text-sm text-muted-foreground">{m.bio}</p>
