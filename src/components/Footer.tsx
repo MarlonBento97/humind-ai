@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 mx-px">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-primary mb-4">humind.ia</h3>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="mx-0 px-0">
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
