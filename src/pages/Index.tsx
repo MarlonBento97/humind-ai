@@ -48,7 +48,7 @@ const Index = () => {
   return <main className="min-h-screen">
       <SEOHead {...seo} />
       <Hero />
-      <SocialProof />
+      <SocialProof className="my-0 py-0" />
       <ComplianceBadges />
       <HowItWorks />
       <Features />
