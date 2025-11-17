@@ -1,49 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-
 const Pricing = () => {
-  const whatsappUrl =
-    "https://api.whatsapp.com/send/?phone=5547999367017&text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+Planos+de+agentes+de+I.A&type=phone_number&app_absent=0";
-
-  const plans = [
-    {
-      name: "Start",
-      subtitle: "Para começar bem",
-      price: "",
-      features: [
-        "1 canal WhatsApp",
-        "Base de respostas + 200 intents",
-        "Agendamentos básicos",
-        "Suporte assíncrono",
-      ],
-    },
-    {
-      name: "Pro",
-      subtitle: "Crescimento previsível",
-      price: "",
-      featured: true,
-      features: [
-        "Tudo do Start",
-        "3 canais + roteamento",
-        "Handoff humano + integrações n8n",
-        "Relatórios e métricas",
-      ],
-    },
-    {
-      name: "Enterprise",
-      subtitle: "Sob medida",
-      price: "",
-      features: [
-        "Multi-times e SLAs",
-        "Segurança e auditoria",
-        "Onboarding dedicado",
-        "Preço sob proposta",
-      ],
-    },
-  ];
-
-  return (
-    <section id="precos" className="py-24 bg-background">
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5547999367017&text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+Planos+de+agentes+de+I.A&type=phone_number&app_absent=0";
+  const plans = [{
+    name: "Start",
+    subtitle: "Para começar bem",
+    price: "",
+    features: ["1 canal WhatsApp", "Base de respostas + 200 intents", "Agendamentos básicos", "Suporte assíncrono"]
+  }, {
+    name: "Pro",
+    subtitle: "Crescimento previsível",
+    price: "",
+    featured: true,
+    features: ["Tudo do Start", "3 canais + roteamento", "Handoff humano + integrações n8n", "Relatórios e métricas"]
+  }, {
+    name: "Enterprise",
+    subtitle: "Sob medida",
+    price: "",
+    features: ["Multi-times e SLAs", "Segurança e auditoria", "Onboarding dedicado", "Preço sob proposta"]
+  }];
+  return <section id="precos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -54,28 +30,17 @@ const Pricing = () => {
           </p>
           <div className="inline-flex items-center gap-2 mt-3 px-3 py-1 rounded-full border border-border bg-card/70 text-sm">
             <span className="text-muted-foreground">A partir de</span>
-            <span className="font-semibold">R$ 1.490/mês</span>
+            <span className="font-semibold">R$ 299,00/mês</span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`relative p-8 rounded-2xl border ${
-                plan.featured
-                  ? "border-primary bg-card/80 backdrop-blur-sm scale-105"
-                  : "border-border bg-card/50"
-              } transition-all duration-300 hover:border-primary/50`}
-              style={{
-                boxShadow: plan.featured ? "0 0 40px hsl(var(--primary) / 0.2)" : "var(--shadow-card)",
-              }}
-            >
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+          {plans.map((plan, index) => <div key={index} className={`relative p-8 rounded-2xl border ${plan.featured ? "border-primary bg-card/80 backdrop-blur-sm scale-105" : "border-border bg-card/50"} transition-all duration-300 hover:border-primary/50`} style={{
+          boxShadow: plan.featured ? "0 0 40px hsl(var(--primary) / 0.2)" : "var(--shadow-card)"
+        }}>
+              {plan.featured && <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
                   Popular
-                </div>
-              )}
+                </div>}
 
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
@@ -87,31 +52,20 @@ const Pricing = () => {
               </div>
 
               <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
+                {plan.features.map((feature, idx) => <li key={idx} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" strokeWidth={2} />
                     <span className="text-sm text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
 
-              <Button
-                variant={plan.featured ? "hero" : "secondary"}
-                size="lg"
-                className="w-full"
-                asChild
-              >
+              <Button variant={plan.featured ? "hero" : "secondary"} size="lg" className="w-full" asChild>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   Começar agora
                 </a>
               </Button>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
-
