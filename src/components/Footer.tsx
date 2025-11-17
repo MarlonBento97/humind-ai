@@ -1,11 +1,8 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-card border-t border-border">
+  return <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -42,7 +39,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:contato@humind.ia" className="hover:text-primary transition-colors">contato@humind.ia</a>
+                <a href="mailto:contato@humind.ia" className="hover:text-primary transition-colors">marlon.bento@humindia.com.br</a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
@@ -68,9 +65,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
-
