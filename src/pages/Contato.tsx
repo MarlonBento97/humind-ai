@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contato = () => {
   const { toast } = useToast();
@@ -33,18 +34,14 @@ const Contato = () => {
         throw new Error("Mensagem inválida");
       }
 
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
       });
 
-      const data = await response.json();
+      if (error) throw error;
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || "Erro ao enviar email");
+      if (!data?.success) {
+        throw new Error(data?.error || "Erro ao enviar email");
       }
 
       toast({
