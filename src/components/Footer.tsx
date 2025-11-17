@@ -42,7 +42,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:contato@humind.ia" className="hover:text-primary transition-colors">contato@humind.ia</a>
+                <a href="mailto:marlon.bento@humindia.com.br" className="hover:text-primary transition-colors">marlon.bento@humindia.com.br</a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
