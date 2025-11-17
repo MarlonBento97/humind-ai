@@ -5,10 +5,18 @@ import { ArrowLeft } from "lucide-react";
 const BackButton = () => {
   const navigate = useNavigate();
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <Button
       variant="ghost"
-      onClick={() => navigate(-1)}
+      onClick={handleBack}
       className="mb-6 -ml-2 hover:bg-accent"
     >
       <ArrowLeft className="w-4 h-4 mr-2" />
