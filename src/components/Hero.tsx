@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar } from "lucide-react";
+import Globe3D from "./Globe3D";
 const Hero = () => {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=5547999367017&text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+Planos+de+agentes+de+I.A&type=phone_number&app_absent=0";
   const calendlyUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3LP2K369n1Ryvb9XG2-ZD97YDgdYI8Zoyz3rodhVEsNwvdRJd0XbhcpebkiAwRkXXljtU_X5MO";
@@ -42,8 +43,8 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="inline-block mb-6">
-            <h2 className="font-bold text-primary glow-text text-9xl">Humind.IA</h2>
+          <div className="inline-block mb-6 w-full">
+            <Globe3D />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Conversas que viram <span className="text-primary glow-text">negócios</span>
